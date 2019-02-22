@@ -34,10 +34,10 @@ public class GetExample extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
 		doGet(request,response);
 		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
 		out.println("<h3>Headers</h3>");
 		Enumeration<String> headerNames = request.getHeaderNames();
 		while (headerNames.hasMoreElements()) {
